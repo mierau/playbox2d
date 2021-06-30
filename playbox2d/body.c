@@ -11,6 +11,7 @@ PBBody* PBBodyCreate(void) {
   body->force = PBVec2MakeEmpty();
   body->friction = 0.2f;
   body->width = PBVec2Make(1.0f, 1.0f);
+  body->AABBHalfSize = PBVec2GetLength(body->width) * 0.5f;
   body->mass = FLT_MAX;
   body->invMass = 0.0f;
   body->I = FLT_MAX;
@@ -34,6 +35,7 @@ void PBBodySet(PBBody* body, const PBVec2 w, float m) {
   body->friction = 0.2f;
   
   body->width = w;
+  body->AABBHalfSize = PBVec2GetLength(body->width) * 0.5f;
   body->mass = m;
   
   if(m < FLT_MAX) {

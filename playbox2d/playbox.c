@@ -117,6 +117,7 @@ int playbox_body_setSize(lua_State* L) {
   PBBody* body = getBodyArg(1);
   body->width.x = pd->lua->getArgFloat(2);
   body->width.y = pd->lua->getArgFloat(3);
+  body->AABBHalfSize = PBVec2GetLength(body->width) * 0.5f;
   return 0;
 }
 
