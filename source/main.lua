@@ -96,8 +96,6 @@ function setup()
   swing_joint:setBiasFactor(0.3)
   swing_joint:setSoftness(0.0)
   world:addJoint(swing_joint)
-  
-  world:addBody(swing_box)
 end
 
 function update(dt)
