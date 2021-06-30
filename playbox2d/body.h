@@ -12,6 +12,7 @@ typedef struct {
   
   // Properties
   PBVec2 width;
+  float AABBHalfSize;
   float friction;
   float mass, invMass;
   float I, invI;
