@@ -41,5 +41,5 @@ ULIBS =
 
 include $(SDK)/C_API/buildsupport/common.mk
 
-# Make sure we compile for x86 on M1 macs (until simulator supports them)
-DYLIB_FLAGS+=-arch x86_64
+# Make sure we compile a universal binary for M1 macs
+DYLIB_FLAGS+=-arch x86_64 -arch arm64
