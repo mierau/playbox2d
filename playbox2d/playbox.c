@@ -217,7 +217,7 @@ static const lua_reg bodyClass[] = {
 { "setRotation", playbox_body_setRotation },
 { "getRotation", playbox_body_getRotation },
 { "setVelocity", playbox_body_setVelocity },
-{ "setVelocity", playbox_body_getVelocity },
+{ "getVelocity", playbox_body_getVelocity },
 { "setAngularVelocity", playbox_body_setAngularVelocity },
 { "setForce", playbox_body_setForce },
 { "setTorque", playbox_body_setTorque },
