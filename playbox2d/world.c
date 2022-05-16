@@ -1,6 +1,6 @@
-#include "world.h"
-#include "platform.h"
-#include "arbiter.h"
+#include "playbox2d/world.h"
+#include "playbox2d/platform.h"
+#include "playbox2d/arbiter.h"
 
 int PBWorldFindArbiter(PBWorld* world, PBBody* body1, PBBody* body2);
 int PBWorldFindFirstArbiterForBody(PBWorld* world, PBBody* body);

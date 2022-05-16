@@ -1,5 +1,5 @@
-#include "platform.h"
-#include "arbiter.h"
+#include "playbox2d/platform.h"
+#include "playbox2d/arbiter.h"
 
 // Box vertex and edge numbering:
 //

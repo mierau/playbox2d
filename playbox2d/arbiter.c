@@ -1,5 +1,5 @@
-#include "platform.h"
-#include "arbiter.h"
+#include "playbox2d/platform.h"
+#include "playbox2d/arbiter.h"
 
 PBArbiter* PBArbiterCreate(PBBody* b1, PBBody* b2) {
   PBArbiter* arbiter = pb_alloc(sizeof(PBArbiter));

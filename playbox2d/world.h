@@ -1,11 +1,11 @@
 #ifndef PLAYBOX_WORLD_H
 #define PLAYBOX_WORLD_H
 
-#include "body.h"
-#include "joint.h"
-#include "arbiter.h"
-#include "maths.h"
-#include "array.h"
+#include "playbox2d/body.h"
+#include "playbox2d/joint.h"
+#include "playbox2d/arbiter.h"
+#include "playbox2d/maths.h"
+#include "playbox2d/array.h"
 
 typedef struct {
   PBVec2 gravity;

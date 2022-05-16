@@ -2,7 +2,7 @@
 #include <float.h>
 #include <assert.h>
 #include <stdlib.h>
-#include "maths.h"
+#include "playbox2d/maths.h"
 
 const float pb_pi = 3.14159265358979323846264f;
 

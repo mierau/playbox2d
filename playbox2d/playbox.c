@@ -1,6 +1,6 @@
-#include "playbox.h"
-#include "maths.h"
-#include "platform.h"
+#include "playbox2d/playbox.h"
+#include "playbox2d/maths.h"
+#include "playbox2d/platform.h"
 
 static const lua_reg worldClass[];
 static const lua_reg bodyClass[];
