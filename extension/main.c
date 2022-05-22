@@ -1,5 +1,5 @@
 #include "pd_api.h"
-#include "playbox.h"
+#include "../playbox2d/playbox.h"
 
 PlaydateAPI* pd = NULL;
 
