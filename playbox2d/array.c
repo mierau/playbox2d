@@ -22,7 +22,7 @@ void* PBArrayGetItem(PBArray* array, int i) {
     return NULL;
   }
   
-  return array->first + (array->item_size * i);
+  return ((char*)array->first) + (array->item_size * i);
 }
 
 void PBArrayRemoveAllItems(PBArray* array) {
@@ -57,10 +57,10 @@ void PBArrayAppendItem(PBArray* array, void* item) {
   }
   else {
     array->first = pb_realloc(array->first, array->item_size * array->count);
-    memset(array->first + (array->item_size * (array->count - 1)), 0, array->item_size);
+    memset( ((char*)array->first) + (array->item_size * (array->count - 1)), 0, array->item_size);
   }
   
-  memcpy(array->first + (array->item_size * (array->count - 1)), item, array->item_size);
+  memcpy( ((char*)array->first) + (array->item_size * (array->count - 1)), item, array->item_size);
 }
   
 void PBArrayRemoveItemAt(PBArray* array, int i) {
@@ -82,7 +82,7 @@ void PBArrayRemoveItemAt(PBArray* array, int i) {
   int items_to_move = array->count - (i + 1);
   array->count--;
   if(items_to_move > 0) {
-    memmove(array->first + (array->item_size * i), array->first + (array->item_size * (i + 1)), array->item_size * items_to_move);
+    memmove( ((char*)array->first) + (array->item_size * i), ((char*)array->first) + (array->item_size * (i + 1)), array->item_size * items_to_move);
   }
   
   if(array->count == 0) {

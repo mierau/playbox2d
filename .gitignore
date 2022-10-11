@@ -3,3 +3,5 @@
 *.o
 build/*
 pdex.*
+*~
+*.swp

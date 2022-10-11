@@ -2,35 +2,10 @@
 #include "maths.h"
 #include "platform.h"
 
-static const lua_reg worldClass[];
-static const lua_reg bodyClass[];
-static const lua_reg jointClass[];
-
 #define CLASSNAME_WORLD "playbox.world"
 #define CLASSNAME_BODY "playbox.body"
 #define CLASSNAME_JOINT "playbox.joint"
 
-void registerPlaybox(void) {
-  const char* err = NULL;
-  
-  // Register body
-  if(!pd->lua->registerClass(CLASSNAME_BODY, bodyClass, NULL, 0, &err)) {
-    pb_log("playbox: Failed to register body class. %s", err);
-    return;
-  }
-  
-  // Register joint
-  if(!pd->lua->registerClass(CLASSNAME_JOINT, jointClass, NULL, 0, &err)) {
-    pb_log("playbox: Failed to register joint class. %s", err);
-    return;
-  }
-  
-  // Register world
-  if(!pd->lua->registerClass(CLASSNAME_WORLD, worldClass, NULL, 0, &err)) {
-    pb_log("playbox: Failed to register world class. %s", err);
-    return;
-  }
-}
 
 // UTILITIES
 
@@ -421,3 +396,24 @@ static const lua_reg worldClass[] = {
 { "getNumberOfContacts", playbox_world_getNumberOfContacts },
 { NULL, NULL }
 };
+void registerPlaybox(void) {
+  const char* err = NULL;
+  
+  // Register body
+  if(!pd->lua->registerClass(CLASSNAME_BODY, bodyClass, NULL, 0, &err)) {
+    pb_log("playbox: Failed to register body class. %s", err);
+    return;
+  }
+  
+  // Register joint
+  if(!pd->lua->registerClass(CLASSNAME_JOINT, jointClass, NULL, 0, &err)) {
+    pb_log("playbox: Failed to register joint class. %s", err);
+    return;
+  }
+  
+  // Register world
+  if(!pd->lua->registerClass(CLASSNAME_WORLD, worldClass, NULL, 0, &err)) {
+    pb_log("playbox: Failed to register world class. %s", err);
+    return;
+  }
+}
