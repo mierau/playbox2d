@@ -47,7 +47,7 @@ int playbox_body_new(lua_State* L) {
   float h = pd->lua->getArgFloat(2);
   float m = pd->lua->getArgFloat(3);
   
-  if(m == 0.0) {
+  if(m == 0.0f) {
     m = FLT_MAX;
   }
   
