@@ -1,8 +1,8 @@
-#ifndef PLAYBOX_ARBITER_H
-#define PLAYBOX_ARBITER_H
+#ifndef PLAYBOX2D_ARBITER_H
+#define PLAYBOX2D_ARBITER_H
 
-#include "maths.h"
-#include "body.h"
+#include "playbox2d/maths.h"
+#include "playbox2d/body.h"
 #include <stdint.h>
 
 typedef union {

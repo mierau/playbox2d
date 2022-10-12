@@ -1,12 +1,9 @@
 #include "pd_api.h"
-#include "playbox.h"
-
-PlaydateAPI* pd = NULL;
+#include "playbox2d/playbox2d.h"
 
 int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint32_t arg) {
   if(event == kEventInitLua) {
-    pd = playdate;
-    registerPlaybox();
+    register_playbox2d(playdate);
   }
   return 0;
 }

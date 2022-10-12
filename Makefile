@@ -6,23 +6,11 @@ PRODUCT = playboxdemo.pdx
 # Locate the SDK
 SDK = $(shell egrep '^\s*SDKRoot' ~/.Playdate/config | head -n 1 | cut -c9-)
 
-VPATH += extension
-VPATH += playbox2d
-
 # List C source files here
-SRC = extension/main.c \
-	playbox2d/array.c \
-	playbox2d/maths.c \
-	playbox2d/body.c \
-	playbox2d/joint.c \
-	playbox2d/collide.c \
-	playbox2d/arbiter.c \
-	playbox2d/world.c \
-	playbox2d/playbox.c
-	
+SRC = extension/main.c
 
 # List all user directories here
-UINCDIR = extension playbox2d
+UINCDIR = extension
 
 # List user asm files
 UASRC = 
@@ -39,6 +27,8 @@ ULIBDIR =
 # List all user libraries here
 ULIBS =
 
+# Include sub makefiles
+include playbox2d.mk
 include $(SDK)/C_API/buildsupport/common.mk
 
 # Make sure we compile a universal binary for M1 macs

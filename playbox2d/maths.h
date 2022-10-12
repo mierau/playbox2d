@@ -1,5 +1,5 @@
-#ifndef PLAYBOX_MATHS_H
-#define PLAYBOX_MATHS_H
+#ifndef PLAYBOX2D_MATHS_H
+#define PLAYBOX2D_MATHS_H
 
 #include <math.h>
 #include <float.h>

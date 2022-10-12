@@ -1,8 +1,8 @@
-#ifndef PLAYBOX_JOINT_H
-#define PLAYBOX_JOINT_H
+#ifndef PLAYBOX2D_JOINT_H
+#define PLAYBOX2D_JOINT_H
 
-#include "maths.h"
-#include "body.h"
+#include "playbox2d/maths.h"
+#include "playbox2d/body.h"
 
 typedef struct {
   PBMat22 M;

@@ -1,7 +1,7 @@
-#ifndef PLAYBOX_BODY_H
-#define PLAYBOX_BODY_H
+#ifndef PLAYBOX2D_BODY_H
+#define PLAYBOX2D_BODY_H
 
-#include "maths.h"
+#include "playbox2d/maths.h"
 
 typedef struct {
   // State

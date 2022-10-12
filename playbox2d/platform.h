@@ -1,9 +1,7 @@
-#ifndef PLAYBOX_PLATFORM_H
-#define PLAYBOX_PLATFORM_H
+#ifndef PLAYBOX2D_PLATFORM_H
+#define PLAYBOX2D_PLATFORM_H
 
 #include "pd_api.h"
-
-extern PlaydateAPI* pd;
 
 #ifndef pb_alloc
 #define pb_alloc(x) pd->system->realloc(NULL, (x))

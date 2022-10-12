@@ -1,7 +1,7 @@
-#include "platform.h"
-#include "joint.h"
-#include "body.h"
-#include "maths.h"
+#include "playbox2d/playbox2d.h"
+#include "playbox2d/joint.h"
+#include "playbox2d/body.h"
+#include "playbox2d/maths.h"
 
 PBJoint* PBJointCreate(PBBody* b1, PBBody* b2, const PBVec2 anchor) {
   PBJoint* joint = pb_alloc(sizeof(PBJoint));

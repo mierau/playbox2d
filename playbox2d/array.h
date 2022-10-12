@@ -1,5 +1,5 @@
-#ifndef PLAYBOX_ARRAY_H
-#define PLAYBOX_ARRAY_H
+#ifndef PLAYBOX2D_ARRAY_H
+#define PLAYBOX2D_ARRAY_H
 
 #include <stdlib.h>
 

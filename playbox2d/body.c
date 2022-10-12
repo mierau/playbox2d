@@ -1,5 +1,5 @@
-#include "platform.h"
-#include "body.h"
+#include "playbox2d/playbox2d.h"
+#include "playbox2d/body.h"
 
 PBBody* PBBodyCreate(void) {
   PBBody* body = pb_alloc(sizeof(PBBody));

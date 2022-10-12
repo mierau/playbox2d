@@ -1,5 +1,5 @@
-#include "array.h"
-#include "platform.h"
+#include "playbox2d/playbox2d.h"
+#include "playbox2d/array.h"
 
 PBArray* PBArrayCreate(size_t item_size) {
   PBArray* array = (PBArray*)pb_alloc(sizeof(PBArray));

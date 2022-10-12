@@ -1,6 +1,5 @@
-#include "playbox.h"
-#include "maths.h"
-#include "platform.h"
+#include "playbox2d/playbox2d.h"
+#include "playbox2d/maths.h"
 
 static const lua_reg worldClass[];
 static const lua_reg bodyClass[];
@@ -10,8 +9,12 @@ static const lua_reg jointClass[];
 #define CLASSNAME_BODY "playbox.body"
 #define CLASSNAME_JOINT "playbox.joint"
 
-void registerPlaybox(void) {
+PlaydateAPI* pd = NULL;
+
+extern void register_playbox2d(PlaydateAPI* api) {
   const char* err = NULL;
+  
+  pd = api;
   
   // Register body
   if(!pd->lua->registerClass(CLASSNAME_BODY, bodyClass, NULL, 0, &err)) {
